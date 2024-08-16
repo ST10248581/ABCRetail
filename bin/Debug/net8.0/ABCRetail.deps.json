@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ABCRetail/1.0.0": {
+        "runtime": {
+          "ABCRetail.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ABCRetail/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

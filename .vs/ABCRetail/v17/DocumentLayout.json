@@ -1,12 +1,139 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\controllers\\customerprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:controllers\\customerprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\views\\customerprofile\\customerprofilecapturepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:views\\customerprofile\\customerprofilecapturepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\models\\customerprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:models\\customerprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\views\\customerprofile\\customerprofilecapturesuccesspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:views\\customerprofile\\customerprofilecapturesuccesspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T15:20:37.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AQIAADcAAAAAAAAAAAAgwEQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-16T15:19:12.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T15:17:48.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerProfileCaptureSuccessPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\CustomerProfile\\CustomerProfileCaptureSuccessPage.cshtml",
+              "RelativeDocumentMoniker": "Views\\CustomerProfile\\CustomerProfileCaptureSuccessPage.cshtml",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\CustomerProfile\\CustomerProfileCaptureSuccessPage.cshtml",
+              "RelativeToolTip": "Views\\CustomerProfile\\CustomerProfileCaptureSuccessPage.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T15:17:43.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Controllers\\CustomerProfileController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CustomerProfileController.cs",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Controllers\\CustomerProfileController.cs",
+              "RelativeToolTip": "Controllers\\CustomerProfileController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAcwBYAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T15:13:07.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerProfileCapturePage.cshtml",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\CustomerProfile\\CustomerProfileCapturePage.cshtml",
+              "RelativeDocumentMoniker": "Views\\CustomerProfile\\CustomerProfileCapturePage.cshtml",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\CustomerProfile\\CustomerProfileCapturePage.cshtml",
+              "RelativeToolTip": "Views\\CustomerProfile\\CustomerProfileCapturePage.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T15:12:35.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerProfileRequest.cs",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Models\\CustomerProfileRequest.cs",
+              "RelativeDocumentMoniker": "Models\\CustomerProfileRequest.cs",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Models\\CustomerProfileRequest.cs",
+              "RelativeToolTip": "Models\\CustomerProfileRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAcwBYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T15:10:51.825Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
