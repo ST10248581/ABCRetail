@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kTv93cx4UPjc1lbTmiuDMIQfluieNgVUarjuj0hOvZA=",
+  "Hash": "j6ivQpxNr30IeHzuqAa8ZT1sSP/sKKyTaCTZXQ/iHUU=",
   "Source": "ABCRetail",
   "BasePath": "_content/ABCRetail",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\wwwroot\\uploads\\7ec312553c0a574c84362f4b762eb22d.jpg",
+      "SourceId": "ABCRetail",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\wwwroot\\",
+      "BasePath": "_content/ABCRetail",
+      "RelativePath": "uploads/7ec312553c0a574c84362f4b762eb22d.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\7ec312553c0a574c84362f4b762eb22d.jpg"
     }
   ]
 }

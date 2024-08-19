@@ -29,3 +29,13 @@ C:\Users\troyk\source\repos\ABCRetail\obj\Debug\net8.0\refint\ABCRetail.dll
 C:\Users\troyk\source\repos\ABCRetail\obj\Debug\net8.0\ABCRetail.pdb
 C:\Users\troyk\source\repos\ABCRetail\obj\Debug\net8.0\ABCRetail.genruntimeconfig.cache
 C:\Users\troyk\source\repos\ABCRetail\obj\Debug\net8.0\ref\ABCRetail.dll
+C:\Users\troyk\source\repos\ABCRetail\obj\Debug\net8.0\ABCRetail.csproj.AssemblyReference.cache
+C:\Users\troyk\source\repos\ABCRetail\bin\Debug\net8.0\Microsoft.Azure.Cosmos.Table.dll
+C:\Users\troyk\source\repos\ABCRetail\bin\Debug\net8.0\Microsoft.Azure.DocumentDB.Core.dll
+C:\Users\troyk\source\repos\ABCRetail\bin\Debug\net8.0\Microsoft.OData.Core.dll
+C:\Users\troyk\source\repos\ABCRetail\bin\Debug\net8.0\Microsoft.OData.Edm.dll
+C:\Users\troyk\source\repos\ABCRetail\bin\Debug\net8.0\Microsoft.Spatial.dll
+C:\Users\troyk\source\repos\ABCRetail\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\troyk\source\repos\ABCRetail\bin\Debug\net8.0\runtimes\win7-x64\native\Cosmos.CRTCompat.dll
+C:\Users\troyk\source\repos\ABCRetail\bin\Debug\net8.0\runtimes\win7-x64\native\Microsoft.Azure.Documents.ServiceInterop.dll
+C:\Users\troyk\source\repos\ABCRetail\obj\Debug\net8.0\ABCRetail.csproj.Up2Date
