@@ -3,52 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\controllers\\customerprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:controllers\\customerprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\entities\\customerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:entities\\customerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\services\\azuretableservice.customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:services\\azuretableservice.customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\services\\azuretableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:services\\azuretableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\models\\customerprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:models\\customerprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\views\\customerprofile\\customerprofilecapturepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:views\\customerprofile\\customerprofilecapturepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\controllers\\customerprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:controllers\\customerprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\views\\customerprofile\\customerprofilecapturesuccesspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:views\\customerprofile\\customerprofilecapturesuccesspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\services\\azureblobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:services\\azureblobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\entities\\customerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:entities\\customerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\models\\customerprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:models\\customerprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\services\\azuretableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:services\\azuretableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\entities\\imageuploadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:entities\\imageuploadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|c:\\users\\troyk\\source\\repos\\abcretail\\services\\azuretableservice.customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F26493E-3356-4D74-9187-D59EB309EEB0}|ABCRetail.csproj|solutionrelative:services\\azuretableservice.customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,122 +50,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T13:29:43.096Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AzureTableService.Customers.cs",
-              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Services\\AzureTableService.Customers.cs",
-              "RelativeDocumentMoniker": "Services\\AzureTableService.Customers.cs",
-              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Services\\AzureTableService.Customers.cs",
-              "RelativeToolTip": "Services\\AzureTableService.Customers.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T13:24:50.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-19T13:14:20.21Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CustomerProfileController.cs",
-              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Controllers\\CustomerProfileController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CustomerProfileController.cs",
-              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Controllers\\CustomerProfileController.cs",
-              "RelativeToolTip": "Controllers\\CustomerProfileController.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAwwDEAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T15:13:07.032Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-22T12:38:21.794Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CustomerProfile.cs",
-              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Entities\\CustomerProfile.cs",
-              "RelativeDocumentMoniker": "Entities\\CustomerProfile.cs",
-              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Entities\\CustomerProfile.cs",
-              "RelativeToolTip": "Entities\\CustomerProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T13:18:18.982Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AzureTableService.cs",
-              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Services\\AzureTableService.cs",
-              "RelativeDocumentMoniker": "Services\\AzureTableService.cs",
-              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Services\\AzureTableService.cs",
-              "RelativeToolTip": "Services\\AzureTableService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T13:22:29.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AQIAADgAAAAAAAAAAAAwwEQAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-16T15:19:12.308Z",
+              "WhenOpened": "2024-08-22T12:21:08.997Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CustomerProfileCaptureSuccessPage.cshtml",
-              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\CustomerProfile\\CustomerProfileCaptureSuccessPage.cshtml",
-              "RelativeDocumentMoniker": "Views\\CustomerProfile\\CustomerProfileCaptureSuccessPage.cshtml",
-              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\CustomerProfile\\CustomerProfileCaptureSuccessPage.cshtml",
-              "RelativeToolTip": "Views\\CustomerProfile\\CustomerProfileCaptureSuccessPage.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T15:17:43.546Z"
+              "DocumentIndex": 3,
+              "Title": "CustomerProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Controllers\\CustomerProfileController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CustomerProfileController.cs",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Controllers\\CustomerProfileController.cs",
+              "RelativeToolTip": "Controllers\\CustomerProfileController.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAgwDAAAAB7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T17:43:18.837Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "AzureBlobService.cs",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Services\\AzureBlobService.cs",
+              "RelativeDocumentMoniker": "Services\\AzureBlobService.cs",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Services\\AzureBlobService.cs",
+              "RelativeToolTip": "Services\\AzureBlobService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T15:17:48.11Z"
+              "WhenOpened": "2024-08-21T17:37:42.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ImageUploadModel.cs",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Entities\\ImageUploadModel.cs",
+              "RelativeDocumentMoniker": "Entities\\ImageUploadModel.cs",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Entities\\ImageUploadModel.cs",
+              "RelativeToolTip": "Entities\\ImageUploadModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T17:36:58.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerProfileCapturePage.cshtml",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\CustomerProfile\\CustomerProfileCapturePage.cshtml",
+              "RelativeDocumentMoniker": "Views\\CustomerProfile\\CustomerProfileCapturePage.cshtml",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\CustomerProfile\\CustomerProfileCapturePage.cshtml",
+              "RelativeToolTip": "Views\\CustomerProfile\\CustomerProfileCapturePage.cshtml",
+              "ViewState": "AQIAABkAAAAAAAAAAAAcwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-21T17:34:40.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomerProfile.cs",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Entities\\CustomerProfile.cs",
+              "RelativeDocumentMoniker": "Entities\\CustomerProfile.cs",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Entities\\CustomerProfile.cs",
+              "RelativeToolTip": "Entities\\CustomerProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T17:26:37.997Z"
             },
             {
               "$type": "Document",
@@ -183,34 +149,33 @@
               "RelativeDocumentMoniker": "Models\\CustomerProfileRequest.cs",
               "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Models\\CustomerProfileRequest.cs",
               "RelativeToolTip": "Models\\CustomerProfileRequest.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAYwAgAAAAAAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAuwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T15:10:51.825Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T17:34:35.607Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T15:20:37.414Z"
+              "DocumentIndex": 7,
+              "Title": "AzureTableService.cs",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Services\\AzureTableService.cs",
+              "RelativeDocumentMoniker": "Services\\AzureTableService.cs",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Services\\AzureTableService.cs",
+              "RelativeToolTip": "Services\\AzureTableService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAARAQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T13:22:29.408Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "CustomerProfileCapturePage.cshtml",
-              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\CustomerProfile\\CustomerProfileCapturePage.cshtml",
-              "RelativeDocumentMoniker": "Views\\CustomerProfile\\CustomerProfileCapturePage.cshtml",
-              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Views\\CustomerProfile\\CustomerProfileCapturePage.cshtml",
-              "RelativeToolTip": "Views\\CustomerProfile\\CustomerProfileCapturePage.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T15:12:35.885Z"
+              "Title": "AzureTableService.Customers.cs",
+              "DocumentMoniker": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Services\\AzureTableService.Customers.cs",
+              "RelativeDocumentMoniker": "Services\\AzureTableService.Customers.cs",
+              "ToolTip": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\Services\\AzureTableService.Customers.cs",
+              "RelativeToolTip": "Services\\AzureTableService.Customers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T17:30:34.288Z"
             }
           ]
         }

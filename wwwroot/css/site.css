@@ -1,5 +1,8 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+    
 }
 
 @media (min-width: 768px) {
@@ -12,25 +15,30 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.header {
+    padding: 2em;
+    background-color: #1B6FA6;
+    color: white;
+}
+
+
+.footer {
+    background-color: #1B6FA6;
+    color: white;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    background-color: #E5F3FF;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin-bottom: 60px;
 }
 
 .container {
-    background-color: #fff;
+    background-color: #B3D9FF;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     width: 100%;
 }
@@ -66,7 +74,7 @@ input[type="text"] {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #2D9CDB;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -75,5 +83,10 @@ button {
 }
 
     button:hover {
-        background-color: #0056b3;
+        background-color: #1B6FA6;
     }
+
+    .color-white{
+        color:white;
+    }
+

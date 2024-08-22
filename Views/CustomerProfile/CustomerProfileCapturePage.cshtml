@@ -39,8 +39,10 @@
 
         <div class="form-group">
             <label asp-for="ProfilePhoto"></label>
-            <input asp-for="ProfilePhoto" type="file" class="form-control-file" />
+            <input asp-for="ProfilePhoto" type="file" class="form-control-file"/>
+           
             <span asp-validation-for="ProfilePhoto" class="text-danger"></span>
+
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
