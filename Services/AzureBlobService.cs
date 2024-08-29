@@ -1,5 +1,6 @@
 ﻿using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
+using Azure.Storage.Sas;
 using Microsoft.Extensions.Configuration;
 
 namespace ABCRetail.Services
@@ -37,6 +38,33 @@ namespace ABCRetail.Services
                 });
             }
 
+            return blobClient.Uri.ToString();
+        }
+
+        public string GetImageUrl(string containerName, string photoName, bool generateSasToken = true)
+        {
+            var containerClient = _blobServiceClient.GetBlobContainerClient(containerName);
+            var blobClient = containerClient.GetBlobClient(photoName);
+
+            if (generateSasToken)
+            {
+                // Generate a SAS token for secure access if needed
+                BlobSasBuilder sasBuilder = new BlobSasBuilder
+                {
+                    BlobContainerName = containerName,
+                    BlobName = photoName,
+                    Resource = "b",
+                    ExpiresOn = DateTimeOffset.UtcNow.AddHours(1) // Set your expiration time
+                };
+
+                sasBuilder.SetPermissions(BlobSasPermissions.Read);
+
+                // Return the full URL with the SAS token
+                Uri sasUri = blobClient.GenerateSasUri(sasBuilder);
+                return sasUri.ToString();
+            }
+
+            // If public access is enabled, just return the blob's URL
             return blobClient.Uri.ToString();
         }
     }

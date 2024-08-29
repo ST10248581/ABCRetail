@@ -1,0 +1,63 @@
+﻿@model ProductListResultModel
+
+@{
+    ViewBag.Title = "All Products";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Products</h2>
+    <div class="row">
+		@if(Model.Products.Count > 0)
+		{
+			@foreach (var prod in Model.Products)
+			{
+				<div class="col-md-4 mb-4">
+					<div class="card">
+						<img src="@prod.ProfilePhotoURL" class="card-img-top" alt="Profile Photo" style="height: 200px; object-fit: cover;">
+						<div class="card-body">
+							<h5 class="card-title">@prod.Name</h5>
+							<p class="card-text"><strong>Description:</strong> @prod.Description</p>
+							<p class="card-text"><strong>R</strong>@prod.Price</p>
+							<p class="card-text"><strong>Category: </strong>Stock: @prod.Stock</p>
+							<button class="product-button" data-product-id="@prod.ProductID" data-product-name="@prod.Name">Proccess Order</button>
+						</div>
+					</div>
+				</div>
+
+			}
+		}
+		else
+		{
+			<div style="text-align:center">
+				<h3>No Existing Products</h3>
+				<p>Kindly add more products to process product orders.</p>
+			</div>
+		}
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('.product-button').click(function () {
+					var productId = $(this).data('product-id');
+					var productName = $(this).data('product-name');
+					$.ajax({
+						url: '/ProductInformation/ProcessOrder',
+						data: { productId: productId, productName: productName },
+						success: function (response) {
+							// Assuming the response contains the URL to redirect to
+							if (response.redirectUrl) {
+								window.location.href = response.redirectUrl;
+							} else if (response.htmlContent) {
+								// If the response contains HTML content
+								$('#target-div').html(response.htmlContent);
+							} else {
+								// Handle other response types if necessary
+								console.log(response);
+							}
+						}
+					});
+				});
+			});
+		</script>
+    </div>
+</div>

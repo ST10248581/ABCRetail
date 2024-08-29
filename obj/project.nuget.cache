@@ -1,12 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "sAJkF0f0Bms1OIUTs70g0axjWTgx4KS677eLMipRoBjG4V7NsVNK5bkd0an31hbZUf9CWu7UxrgsStLCp1wz+Q==",
+  "dgSpecHash": "KFr9XlTGkEOs0AjdfTZYEkvy5UCbewDfW7Ww6xb5VbGEoyw1OXyIudHGAhvkEPlufoiFiJm/PPZ2atanCYM/Rw==",
   "success": true,
   "projectFilePath": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\ABCRetail.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\troyk\\.nuget\\packages\\azure.core\\1.41.0\\azure.core.1.41.0.nupkg.sha512",
     "C:\\Users\\troyk\\.nuget\\packages\\azure.storage.blobs\\12.21.2\\azure.storage.blobs.12.21.2.nupkg.sha512",
     "C:\\Users\\troyk\\.nuget\\packages\\azure.storage.common\\12.20.1\\azure.storage.common.12.20.1.nupkg.sha512",
+    "C:\\Users\\troyk\\.nuget\\packages\\azure.storage.files.shares\\12.19.1\\azure.storage.files.shares.12.19.1.nupkg.sha512",
+    "C:\\Users\\troyk\\.nuget\\packages\\azure.storage.queues\\12.19.1\\azure.storage.queues.12.19.1.nupkg.sha512",
+    "C:\\Users\\troyk\\.nuget\\packages\\microsoft.aspnet.mvc\\5.3.0\\microsoft.aspnet.mvc.5.3.0.nupkg.sha512",
+    "C:\\Users\\troyk\\.nuget\\packages\\microsoft.aspnet.razor\\3.3.0\\microsoft.aspnet.razor.3.3.0.nupkg.sha512",
+    "C:\\Users\\troyk\\.nuget\\packages\\microsoft.aspnet.webpages\\3.3.0\\microsoft.aspnet.webpages.3.3.0.nupkg.sha512",
     "C:\\Users\\troyk\\.nuget\\packages\\microsoft.azure.cosmos.table\\1.0.8\\microsoft.azure.cosmos.table.1.0.8.nupkg.sha512",
     "C:\\Users\\troyk\\.nuget\\packages\\microsoft.azure.documentdb.core\\2.11.2\\microsoft.azure.documentdb.core.2.11.2.nupkg.sha512",
     "C:\\Users\\troyk\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
@@ -16,6 +21,7 @@
     "C:\\Users\\troyk\\.nuget\\packages\\microsoft.odata.core\\7.6.4\\microsoft.odata.core.7.6.4.nupkg.sha512",
     "C:\\Users\\troyk\\.nuget\\packages\\microsoft.odata.edm\\7.6.4\\microsoft.odata.edm.7.6.4.nupkg.sha512",
     "C:\\Users\\troyk\\.nuget\\packages\\microsoft.spatial\\7.6.4\\microsoft.spatial.7.6.4.nupkg.sha512",
+    "C:\\Users\\troyk\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "C:\\Users\\troyk\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\troyk\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\troyk\\.nuget\\packages\\newtonsoft.json\\10.0.2\\newtonsoft.json.10.0.2.nupkg.sha512",
@@ -121,5 +127,46 @@
     "C:\\Users\\troyk\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\troyk\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Mvc 5.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Razor 3.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebPages 3.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

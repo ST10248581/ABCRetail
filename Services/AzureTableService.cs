@@ -15,6 +15,24 @@ namespace ABCRetail.Services
         }
 
 
+        public async Task<List<T>> GetAllEntitiesAsync<T>() where T : TableEntity, new()
+        {
+            var query = new TableQuery<T>();
+            var entities = new List<T>();
+            TableContinuationToken token = null;
+
+            do
+            {
+                var queryResult = await _table.ExecuteQuerySegmentedAsync(query, token);
+                entities.AddRange(queryResult.Results);
+                token = queryResult.ContinuationToken;
+            }
+
+            while (token != null);
+
+            return entities;
+        }
+
     }
 
 }

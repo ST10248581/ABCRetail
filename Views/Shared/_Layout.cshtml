@@ -9,23 +9,49 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ABCRetail.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm mb-3 header">
-            <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="container-fluid d-flex justify-content-between align-items-center align-content-center" style="margin:3em">
                 <a style="font-size: 35px;" class=" d-flex navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">ABCRetail</a>
                 
                 <div class=" d-flex ">
                     <ul style="font-size: 18px;"  class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                        <li class="nav-item align-content-center">
                             <a  class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        
+                        <li class="nav-item dropdown" style="margin: 20px">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="customerDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Customer Profiles
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="customerDropdown" >
+                                <a class=" text-black dropdown-item" asp-area="" asp-controller="CustomerProfile" asp-action="CreateProfile">Create Customer Profile</a>
+                                <a class=" text-lack dropdown-item" asp-area="" asp-controller="CustomerProfile" asp-action="ShowAllCustomers">View Customer Profiles</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="CustomerProfile" asp-action="CreateProfile">Create Customer Profile</a>
+                        <li class="nav-item dropdown" style="margin: 20px">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               Products
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="productDropdown">
+                                <a class="text-black dropdown-item" dropdown-item" asp-area="" asp-controller="ProductInformation" asp-action="Index">Create Product</a>
+                                <a class="text-black dropdown-item" asp-area="" asp-controller="ProductInformation" asp-action="ShowAllProducts">View All Products</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown" style="margin: 20px">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="productDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Contracts
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="productDropdown" style="margin: 20px">
+                                <a class="text-black dropdown-item" dropdown-item" asp-area="" asp-controller="BusinessContract" asp-action="Index">Upload Contract</a>
+                                <a class="text-black dropdown-item" asp-area="" asp-controller="BusinessContract" asp-action="Download">DownloadContract</a>
+                            </div>
                         </li>
                     </ul>
                 </div>

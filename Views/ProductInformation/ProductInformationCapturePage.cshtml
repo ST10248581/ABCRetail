@@ -1,0 +1,50 @@
+﻿@model ProductInformationRequest
+
+@{
+    ViewData["Title"] = "Create Product";
+}
+
+<div class="container">
+    <h2>Create Customer Profile</h2>
+    <form asp-action="Index" asp-controller="ProductInformation" enctype="multipart/form-data" method="post">
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Price"></label>
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Stock"></label>
+            <input asp-for="Stock" class="form-control" />
+            <span asp-validation-for="Stock" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Category"></label>
+            <input asp-for="Category" class="form-control" />
+            <span asp-validation-for="Category" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ProductPhoto"></label>
+            <input asp-for="ProductPhoto" type="file" class="form-control-file" />
+
+            <span asp-validation-for="ProductPhoto" class="text-danger"></span>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

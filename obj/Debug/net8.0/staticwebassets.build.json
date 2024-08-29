@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "j6ivQpxNr30IeHzuqAa8ZT1sSP/sKKyTaCTZXQ/iHUU=",
+  "Hash": "tCeMsLDWvgviNLM15jY8cgh/eNqhjb5MS0Sq0KnLbgU=",
   "Source": "ABCRetail",
   "BasePath": "_content/ABCRetail",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\wwwroot\\Images\\Artisan.jpeg",
+      "SourceId": "ABCRetail",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\wwwroot\\",
+      "BasePath": "_content/ABCRetail",
+      "RelativePath": "Images/Artisan.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Artisan.jpeg"
     },
     {
       "Identity": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\wwwroot\\js\\site.js",

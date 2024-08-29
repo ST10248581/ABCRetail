@@ -1,5 +1,7 @@
-﻿using ABCRetail.Entities;
+﻿using System.Collections.Concurrent;
+using ABCRetail.Entities;
 using Microsoft.Azure.Cosmos.Table;
+using Microsoft.Azure.Documents;
 
 namespace ABCRetail.Services
 {
@@ -11,7 +13,7 @@ namespace ABCRetail.Services
             await _table.ExecuteAsync(insertOrMergeOperation);
         }
 
-        public async Task<CustomerProfile> RetrieveEntityAsync(string partitionKey, string rowKey)
+        public async Task<CustomerProfile> RetrieveCustomerEntityAsync(string partitionKey, string rowKey)
         {
             TableOperation retrieveOperation = TableOperation.Retrieve<CustomerProfile>(partitionKey, rowKey);
             TableResult result = await _table.ExecuteAsync(retrieveOperation);
@@ -23,5 +25,6 @@ namespace ABCRetail.Services
             TableOperation deleteOperation = TableOperation.Delete(entity);
             await _table.ExecuteAsync(deleteOperation);
         }
+
     }
 }

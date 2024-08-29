@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Processind Order";
+}
+
+<div class="container">
+    <h2>Processing Order...</h2>
+    <p style="text-align:center" id="message-container"></p>
+</div>
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function pollQueue() {
+        $.ajax({
+            url: '@Url.Action("GetQueueMessage", "ProductInformation")',
+            type: 'GET',
+            success: function (data) {
+                if (data.message) {
+                    $('#message-container').html('<p>' + data.message + '</p>');
+
+
+                    setTimeout(pollQueue, 4000);
+                } else {
+
+                    window.location.href = '@Url.Action("ShowAllProducts", "ProductInformation")';
+                }
+            },
+            error: function () {
+                // Handle error if needed
+                console.error('Failed to get message from queue.');
+                // Optionally set a delay before retrying in case of an error
+                setTimeout(pollQueue, 5000); // Retry after 5 seconds
+            }
+        });
+    }
+
+    // Start polling when the page loads
+    $(document).ready(function () {
+        pollQueue();
+    });
+</script>

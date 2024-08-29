@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ABCRetail.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\wwwroot\\Images\\Artisan.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Artisan.jpeg"
+    },
+    {
       "Id": "C:\\Users\\troyk\\source\\repos\\ABCRetail\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

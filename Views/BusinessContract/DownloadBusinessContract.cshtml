@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Download File";
+}
+
+<h2>Download File</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>File Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fileName in Model.FileNames)
+        {
+            <tr>
+                <td>@fileName</td>
+                <td>
+                    <a href="@Url.Action("DownloadFile", "BusinessContract", new { fileName = fileName })" class="btn btn-info">Download</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
