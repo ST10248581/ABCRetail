@@ -1,0 +1,162 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+main {
+    flex-grow: 1;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.header {
+    padding: 2em;
+    background-color: #1B6FA6;
+    color: white;
+}
+
+.content {
+    flex: 1;
+}
+
+.footer {
+    background-color: #1B6FA6;
+    color: white;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #E5F3FF;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #B3D9FF;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    margin: 2em;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2D9CDB;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button:hover {
+        background-color: #1B6FA6;
+    }
+
+    .color-white{
+        color:white;
+    }
+
+}
+
+/* Card spacing */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Card image styling */
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+/* Card body padding and text alignment */
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Card title styling */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Card text styling */
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Responsive columns for different screen sizes */
+@media (min-width: 768px) {
+    .col-md-4 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+
+/* Add some space between cards */
+.row {
+    margin: 0 -15px;
+}
+
+.col-md-4 {
+    padding: 0 15px;
+}

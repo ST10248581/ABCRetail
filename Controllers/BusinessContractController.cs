@@ -95,7 +95,7 @@ namespace ABCRetail.Controllers
             {
                 var stream = await _azureContractFileService.DownloadFileAsync(fileName);
 
-                _azureContractFileService.AppendLogAsync("SystemProcessLogs", $"File Download: {fileName}");
+                _azureFileService.AppendLogAsync("SystemProcessLogs", $"File Download: {fileName}");
 
                 return File(stream, "application/octet-stream", fileName);
             }
