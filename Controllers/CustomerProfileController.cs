@@ -1,26 +1,22 @@
-﻿using System.Reflection;
+﻿using System.Net.Http;
+using System.Reflection;
+using System.Text;
 using ABCRetail.Entities;
 
 using ABCRetail.Models;
 using ABCRetail.Services;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace ABCRetail.Controllers
 {
     public class CustomerProfileController : Controller
     {
-        private readonly AzureTableService _tableService;
-        private readonly BlobStorageService _blobStorageService;
         private readonly AzureQueueService _azureQueueService;
-        private readonly AzureFileService _azureFileService;
-
 
         public CustomerProfileController()
         {
-            _tableService = new AzureTableService("CustomerProfiles");
-            _blobStorageService = new BlobStorageService();
             _azureQueueService = new AzureQueueService("customerprofilequeue");
-            _azureFileService = new AzureFileService("systemlogs");
         }
 
         [HttpGet]
@@ -35,35 +31,36 @@ namespace ABCRetail.Controllers
             try
             {
 
-                var customerId = Guid.NewGuid();
-
-                CustomerProfile customer = new CustomerProfile(customerId.ToString(), request.LastName)
+                var data = new
                 {
                     FirstName = request.FirstName,
                     LastName = request.LastName,
                     Email = request.Email,
                     Address = request.Address,
-                    Phone = request.Phone
+                    Phone = request.Phone,
+                    ProfilePhoto = request.ProfilePhoto != null ? Convert.ToBase64String(GetBytesFromFile(request.ProfilePhoto)) : ""
                 };
 
-                await _tableService.InsertOrMergeEntityAsync(customer);
-                await _azureQueueService.SendMessageAsync("Creating Customer Profile...");
+                string jsonData = JsonConvert.SerializeObject(data);
 
-                // Handle file upload and save the profile information to the database
-                if (request.ProfilePhoto != null)
+                using (HttpClient client = new HttpClient())
                 {
-                    string containerName = "customerprofileimages"; 
-                    var imageUrl = await _blobStorageService.UploadImageAsync(request.ProfilePhoto, containerName, customerId.ToString());
-                    await _azureQueueService.SendMessageAsync("Uploading Profile Photo...");                 
-                }
+                    var functionUrl = "https://abcretailstoragefunctions.azurewebsites.net/api/CreateProfile?code=cHqA3YmrT1knrrmw0UXsjD4mtKin6dH08sVkhUWB_d6KAzFu-H93Cg%3D%3D";
+                    HttpContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
-                _azureFileService.AppendLogAsync("SystemProcessLogs", $"Customer Profile ({request.FirstName} {request.LastName})  Created");
+                    HttpResponseMessage response = await client.PostAsync(functionUrl, content);
+
+                    if (!response.IsSuccessStatusCode)
+                    {
+                        string errorMessage = await response.Content.ReadAsStringAsync();
+                        throw new Exception($"Error: {response.StatusCode}, Details: {errorMessage}");
+                    }
+                }
 
                 return RedirectToAction("Loading");
             }
             catch(Exception ex) 
             {
-                _azureFileService.AppendLogAsync("ErrorLogs", $"Error: {ex.Message}");
                 TempData["ErrorMessage"] = ex.Message;
                 return RedirectToAction("Error", "Home");
                 
@@ -92,40 +89,37 @@ namespace ABCRetail.Controllers
         {
             try
             {
-                var entities = await _tableService.GetAllEntitiesAsync<CustomerProfile>();
-
-                var result = new CustomerProfileListResultModel()
+                using(var httpClient = new HttpClient())
                 {
-                    Customers = new List<CustomerProfileResultModel>()
-                };
+                    string functionUrl = "https://abcretailstoragefunctions.azurewebsites.net/api/GetAllCustomers?code=cHqA3YmrT1knrrmw0UXsjD4mtKin6dH08sVkhUWB_d6KAzFu-H93Cg%3D%3D";
 
-                foreach (var entity in entities)
-                {
-                    var profile = new CustomerProfileResultModel()
-                    {
-                        FirstName = entity.FirstName,
-                        LastName = entity.LastName,
-                        Email = entity.Email,
-                        Phone = entity.Phone,
-                        Address = entity.Address
-                    };
+                    
+                    HttpResponseMessage response = await httpClient.GetAsync(functionUrl);
 
-                    string imageUrl = _blobStorageService.GetImageUrl("customerprofileimages", entity.PartitionKey);
-                    profile.ProfilePhotoURL = imageUrl;
+                    if (!response.IsSuccessStatusCode) throw new Exception("Failed to retrieve customer profiles.");
+                      
+                    
+                    var result = await response.Content.ReadFromJsonAsync<CustomerProfileListResultModel>();
+                    return View("ViewAllCustomers", result);
+                }              
 
-                    result.Customers.Add(profile);
-                }
-
-                return View("ViewAllCustomers", result);
             }
             catch (Exception ex)
             {
-                _azureFileService.AppendLogAsync("ErrorLogs", $"Error: {ex.Message}");
                 TempData["ErrorMessage"] = ex.Message;
                 return RedirectToAction("Error", "Home");
 
             }
 
+        }
+
+        private byte[] GetBytesFromFile(IFormFile file)
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                file.CopyTo(memoryStream);
+                return memoryStream.ToArray();
+            }
         }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System.Security.Cryptography;
+using System.Text;
 using ABCRetail.Models;
 using ABCRetail.Services;
 using Azure.Core;
 using Azure.Storage.Files.Shares;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace ABCRetail.Controllers
 {
@@ -32,23 +34,23 @@ namespace ABCRetail.Controllers
             try
             {
                 if (file == null) throw new Exception("File cannot be empty please upload a file.");
-                if (file.Length > 0)
+
+                using (var content = new MultipartFormDataContent())
                 {
-                    using (var stream = file.OpenReadStream())
+                    var streamContent = new StreamContent(file.OpenReadStream());
+                    content.Add(streamContent, "file", file.FileName);
+
+                    using (var client = new HttpClient())
                     {
-                        await _azureContractFileService.UploadFileAsync(file.FileName, stream);
+                        var response = await client.PostAsync("https://abcretailstoragefunctions.azurewebsites.net/api/UploadFile?code=cHqA3YmrT1knrrmw0UXsjD4mtKin6dH08sVkhUWB_d6KAzFu-H93Cg%3D%3D", content);
+                        response.EnsureSuccessStatusCode();
                     }
                 }
-
-                await _azureQueueService.SendMessageAsync("Uploading File...");
-
-                _azureFileService.AppendLogAsync("SystemProcessLogs", $"File Upload: {file.FileName}");
 
                 return RedirectToAction("Loading");
             }
             catch (Exception ex)
             {
-                _azureFileService.AppendLogAsync("ErrorLogs", $"Error: {ex.Message}");
                 TempData["ErrorMessage"] = ex.Message;
                 return RedirectToAction("Error", "Home");
             }
@@ -93,15 +95,28 @@ namespace ABCRetail.Controllers
         {
             try
             {
-                var stream = await _azureContractFileService.DownloadFileAsync(fileName);
+                using (var client = new HttpClient())
+                {
 
-                _azureFileService.AppendLogAsync("SystemProcessLogs", $"File Download: {fileName}");
+                    var data = new
+                    {
+                        FileName = fileName
+                    };
 
-                return File(stream, "application/octet-stream", fileName);
+                    string jsonData = JsonConvert.SerializeObject(data);
+
+                    HttpContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+                    var response = await client.PostAsync("https://abcretailstoragefunctions.azurewebsites.net/api/downloadfile?code=cHqA3YmrT1knrrmw0UXsjD4mtKin6dH08sVkhUWB_d6KAzFu-H93Cg%3D%3D", content);
+                    response.EnsureSuccessStatusCode();
+
+                    var stream = await response.Content.ReadAsStreamAsync();
+
+                    return File(stream, "application/octet-stream", fileName);
+                }  
             }
             catch (Exception ex)
             {
-                _azureFileService.AppendLogAsync("ErrorLogs", $"Error: {ex.Message}");
                 TempData["ErrorMessage"] = ex.Message;
                 return RedirectToAction("Error", "Home");
             }
@@ -110,20 +125,20 @@ namespace ABCRetail.Controllers
 
         private async Task<List<string>> GetFileNamesAsync()
         {
-            var fileList = new List<string>();
-
-            var shareClient = new ShareClient(_azureContractFileService.GetConnection(), _azureContractFileService.GetFileShareName());
-            var directoryClient = shareClient.GetRootDirectoryClient();
-
-
-            await foreach (var fileItem in directoryClient.GetFilesAndDirectoriesAsync())
+            using(var httpClient = new HttpClient())
             {
-                fileList.Add(fileItem.Name);
+
+                var functionUrl = "https://abcretailstoragefunctions.azurewebsites.net/api/GetAllFiles?code=cHqA3YmrT1knrrmw0UXsjD4mtKin6dH08sVkhUWB_d6KAzFu-H93Cg%3D%3D";
+
+                HttpResponseMessage response = await httpClient.GetAsync(functionUrl);
+                response.EnsureSuccessStatusCode();
+
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                var fileNames = JsonConvert.DeserializeObject<List<string>>(responseBody);
+
+                return fileNames;
             }
-
-
-
-            return fileList;
         }
 
         [HttpGet]

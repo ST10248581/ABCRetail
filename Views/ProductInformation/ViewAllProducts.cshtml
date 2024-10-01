@@ -44,14 +44,11 @@
 						url: '/ProductInformation/ProcessOrder',
 						data: { productId: productId, productName: productName },
 						success: function (response) {
-							// Assuming the response contains the URL to redirect to
 							if (response.redirectUrl) {
 								window.location.href = response.redirectUrl;
-							} else if (response.htmlContent) {
-								// If the response contains HTML content
+							} else if (response.htmlContent) {							
 								$('#target-div').html(response.htmlContent);
 							} else {
-								// Handle other response types if necessary
 								console.log(response);
 							}
 						}

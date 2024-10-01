@@ -1,24 +1,21 @@
-﻿using ABCRetail.Entities;
+﻿using System.Net.Http;
+using System.Text;
+using ABCRetail.Entities;
 using ABCRetail.Models;
 using ABCRetail.Services;
 using Azure.Core;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace ABCRetail.Controllers
 {
     public class ProductInformationController : Controller
     {
-        private readonly AzureTableService _tableService;
-        private readonly BlobStorageService _blobStorageService;
         private readonly AzureQueueService _azureQueueService;
-        private readonly AzureFileService _azureFileService;
 
         public ProductInformationController()
         {
-            _tableService = new AzureTableService("Products");
-            _blobStorageService = new BlobStorageService();
             _azureQueueService = new AzureQueueService("productinformationqueue");
-            _azureFileService = new AzureFileService("systemlogs");
         }
 
         [HttpGet]
@@ -32,35 +29,40 @@ namespace ABCRetail.Controllers
         {
             try
             {
-                var productId = Guid.NewGuid();
 
-                Product product = new Product(productId.ToString(), request.Name)
+                var product = new
                 {
                     Name = request.Name,
                     Description = request.Description,
                     Price = request.Price,
                     Stock = request.Stock,
                     Category = request.Category,
-                   
+                    ProductPhoto = request.ProductPhoto != null ? Convert.ToBase64String(GetBytesFromFile(request.ProductPhoto)) : ""
                 };
 
-                await _tableService.InsertOrMergeEntityAsync(product);
-                await _azureQueueService.SendMessageAsync("Creating Product...");
+                string jsonData = JsonConvert.SerializeObject(product);
 
-                if (request.ProductPhoto != null)
+
+                using (HttpClient client = new HttpClient())
                 {
-                    await _azureQueueService.SendMessageAsync("Uploading Product Photo...");
-                    string containerName = "productimages";
-                    var imageUrl = await _blobStorageService.UploadImageAsync(request.ProductPhoto, containerName, productId.ToString());
+                    var functionUrl = "https://abcretailstoragefunctions.azurewebsites.net/api/CreateProduct?code=cHqA3YmrT1knrrmw0UXsjD4mtKin6dH08sVkhUWB_d6KAzFu-H93Cg%3D%3D";
+                    HttpContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
+                    HttpResponseMessage response = await client.PostAsync(functionUrl, content);
+
+                    if (!response.IsSuccessStatusCode)
+                    {
+                        string errorMessage = await response.Content.ReadAsStringAsync();
+                        throw new Exception($"Error: {response.StatusCode}, Details: {errorMessage}");
+                    }
                 }
 
-                _azureFileService.AppendLogAsync("SystemProcessLogs", $"Product Created: {product.Name}");
+
                 return RedirectToAction("Loading");
+
             }
             catch (Exception ex)
             {
-                _azureFileService.AppendLogAsync("ErrorLogs", $"Error: {ex.Message}");
                 TempData["ErrorMessage"] = ex.Message;
                 return RedirectToAction("Error", "Home");
 
@@ -89,41 +91,27 @@ namespace ABCRetail.Controllers
         {
             try
             {
-                var entities = await _tableService.GetAllEntitiesAsync<Product>();
-
-                var result = new ProductListResultModel()
+                using (var httpClient = new HttpClient())
                 {
-                    Products = new List<ProductInformationResultModel>()
-                };
+                    
+                    string functionUrl = "https://abcretailstoragefunctions.azurewebsites.net/api/GetAllProducts?code=cHqA3YmrT1knrrmw0UXsjD4mtKin6dH08sVkhUWB_d6KAzFu-H93Cg%3D%3D";
 
-                foreach (var entity in entities)
-                {
-                    var profile = new ProductInformationResultModel()
-                    {
-                        ProductID = entity.PartitionKey,
-                        Name = entity.Name,
-                        Description = entity.Description,
-                        Price = entity.Price,
-                        Stock = entity.Stock,
-                        Category = entity.Category,
-                    };
+                    HttpResponseMessage response = await httpClient.GetAsync(functionUrl);
 
-                    string imageUrl = _blobStorageService.GetImageUrl("productimages", entity.PartitionKey);
-                    profile.ProfilePhotoURL = imageUrl;
+                    if (!response.IsSuccessStatusCode) throw new Exception("Failed to retrieve products.");
 
-                    result.Products.Add(profile);
+                    var result = await response.Content.ReadFromJsonAsync<ProductListResultModel>();
+
+                    return View("ViewAllProducts", result);
                 }
-
-                return View("ViewAllProducts", result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                _azureFileService.AppendLogAsync("ErrorLogs", $"Error: {ex.Message}");
                 TempData["ErrorMessage"] = ex.Message;
                 return RedirectToAction("Error", "Home");
 
             }
-            
+
 
         }
 
@@ -131,38 +119,48 @@ namespace ABCRetail.Controllers
         {
             try
             {
-				var product = await _tableService.RetrieveProductEntityAsync(productId, productName);
-				await _azureQueueService.SendMessageAsync("Fetching Product Information...");
+                using (var httpClient = new HttpClient())
+                {
+                    string functionUrl = "https://abcretailstoragefunctions.azurewebsites.net/api/ProcessOrder?code=cHqA3YmrT1knrrmw0UXsjD4mtKin6dH08sVkhUWB_d6KAzFu-H93Cg%3D%3D";
 
-				if (product == null) throw new Exception("Product could not be found.");
 
-                if (product.Stock <= 0) throw new Exception("Product out of stock.");
+                    var data = new
+                    {
+                        ProductId = productId,
+                        ProductName = productName
+                    };
 
-				product.Stock--;
+                    string jsonData = JsonConvert.SerializeObject(data);
 
-				await _azureQueueService.SendMessageAsync("Updating Inventory...");
+                    HttpContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await httpClient.PostAsync(functionUrl, content);
 
-				_tableService.InsertOrMergeEntityAsync(product);
+                    if (!response.IsSuccessStatusCode) throw new Exception("Failed to process product order.");
 
-				await _azureQueueService.SendMessageAsync("Processing Order...");
-
-                _azureFileService.AppendLogAsync("SystemProcessLogs", $"OrderProcessed: {productName}");
-
-                var url = Url.Action("ProcessOrderLoading");
-                return Json(new { redirectUrl = url });
-			}
-            catch(Exception ex)
+                    var url = Url.Action("ProcessOrderLoading");
+                    return Json(new { redirectUrl = url });
+                }
+            }
+            catch (Exception ex)
             {
-                _azureFileService.AppendLogAsync("ErrorLogs", $"Error: {ex.Message}");
                 TempData["ErrorMessage"] = ex.Message;
-				return RedirectToAction("Error", "Home");
-			}
-            
-		}
+                return RedirectToAction("Error", "Home");
+            }
+
+        }
 
         public async Task<ActionResult> ProcessOrderLoading()
         {
             return View("ProcessOrder");
+        }
+
+        private byte[] GetBytesFromFile(IFormFile file)
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                file.CopyTo(memoryStream);
+                return memoryStream.ToArray();
+            }
         }
     }
 }
