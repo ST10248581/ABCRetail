@@ -19,7 +19,15 @@
 							<p class="card-text"><strong>Description:</strong> @prod.Description</p>
 							<p class="card-text"><strong>R</strong>@prod.Price</p>
 							<p class="card-text"><strong>Category: </strong>Stock: @prod.Stock</p>
-							<button class="product-button" data-product-id="@prod.ProductID" data-product-name="@prod.Name">Proccess Order</button>
+							<button class="product-button" 
+							data-prodId = "@prod.ProductID"
+							data-category="@prod.Category" 
+							data-description="@prod.Description"
+							data-name="@prod.Name"
+							data-stock="@prod.Stock"
+							data-price="@prod.Price">
+							Place Order
+						</button>
 						</div>
 					</div>
 				</div>
@@ -38,11 +46,22 @@
 		<script>
 			$(document).ready(function () {
 				$('.product-button').click(function () {
-					var productId = $(this).data('product-id');
-					var productName = $(this).data('product-name');
+					var prodId = $(this).data('prodId');
+					var category = $(this).data('category');
+					var description = $(this).data('description');
+					var name = $(this).data('name');
+					var stock = $(this).data('stock');
+					var price = $(this).data('price');
 					$.ajax({
 						url: '/ProductInformation/ProcessOrder',
-						data: { productId: productId, productName: productName },
+						data: { 
+							aProductId : prodId,
+							category : category, 
+							description : description,
+							name : name, 
+							stock : stock,
+							price : price
+						},
 						success: function (response) {
 							if (response.redirectUrl) {
 								window.location.href = response.redirectUrl;

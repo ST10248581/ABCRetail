@@ -1,0 +1,71 @@
+﻿@model CustomerProfileListResultModel
+
+@{
+    ViewBag.Title = "All Customer Profiles";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Customer Profiles</h2>
+    <div class="row">
+        @if (Model.Customers.Count > 0)
+        {
+            @foreach (var customer in Model.Customers)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="@customer.ProfilePhotoURL" class="card-img-top" alt="Profile Photo" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">@customer.FirstName @customer.LastName</h5>
+                            <p class="card-text"><strong>Email:</strong> @customer.Email</p>
+                            <p class="card-text"><strong>Phone:</strong> @customer.Phone</p>
+                            <p class="card-text"><strong>Address:</strong> @customer.Address</p>
+                            <button 
+                                class="product-button"
+                                data-fullName = "@customer.FirstName @customer.LastName"
+                                data-email = "@customer.Email"
+                                data-phoneNumber = "@customer.Phone"                               
+                            >
+                                Select
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div style="text-align:center">
+                <h3>No Existing Customer Profiles</h3>
+                <p>Kindly create customer profiles to view them.</p>
+            </div>
+        }
+
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$('.product-button').click(function () {
+			var fullName = $(this).data('fullName');
+            var email = $(this).data('email');
+            var phoneNumber = $(this).data('phoneNumber');
+			$.ajax({
+				url: '/ProductInformation/ProcessCustomerOrder',
+				data: {
+					fullName : fullName,
+                    email : email, 
+                    phoneNumber : phoneNumber
+				},
+				success: function (response) {
+					if (response.redirectUrl) {
+						window.location.href = response.redirectUrl;
+					} else if (response.htmlContent) {
+						$('#target-div').html(response.htmlContent);
+					} else {
+						console.log(response);
+					}
+				}
+			});
+		});
+	});
+</script>
